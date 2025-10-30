@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMS Registration</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="../assets/img/logo.jpg" alt="CEMS Logo" />
+            <h1>Campus Event Management System - Register</h1>
+            <p>Create your account to start managing and participating in campus events.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div>
+            <a href="index.html">CEMS</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" aria-current="page">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>Register</h3>
+            <form>
+                <fieldset>
+                    <legend>Category</legend>
+                    <label><input type="radio" name="Category" value="Staff" required> Staff</label>
+                    <label><input type="radio" name="Category" value="Student" required> Student</label>
+                    <label><input type="radio" name="Category" value="Public" required> Public</label>
+                </fieldset>
+                <div>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required autocomplete="fullname"
+                        placeholder="Anake N">
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                        placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+60 12-345 678">
+                </div>
+                <div>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required minlength="6"
+                        autocomplete="new-password" placeholder="Choose a strong password">
+                </div>
+                <div>
+                    <p><strong>Recommend event about:</strong></p>
+                    <label><input type="checkbox" name="event[]" value="workshop"> Workshop</label><br>
+                    <label><input type="checkbox" name="event[]" value="seminar"> Seminar</label><br>
+                    <label><input type="checkbox" name="event[]" value="competition"> Competition</label><br>
+                    <label><input type="checkbox" name="event[]" value="festival"> Festival</label><br>
+                    <label><input type="checkbox" name="event[]" value="sport"> Sport</label><br>
+                    <label><input type="checkbox" name="event[]" value="course"> Course</label><br>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; <span id="y"></span> Aniq BI23110059 | Website</p>
+    </footer>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

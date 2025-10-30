@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CEMS — Login</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="../assets/img/event1.jpg" alt="CEMS Logo">
+            <h1>Campus Event Management System</h1>
+            <p>Organize, manage, and participate in campus events seamlessly</p>
+        </div>
+    </header>
+
+    <nav>
+        <div>
+            <a href="index.html">CEMS</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html" aria-current="page">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>Login</h3>
+            <form>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email" placeholder="you@example.edu" required />
+                </div>
+                <div>
+                    <label for="password">Password</label><br>
+                    <input id="password" name="password" type="password" placeholder="Your password" required />
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <p>
+                    New here? <a href="register.html">Create an account</a> ·
+                    <a href="forgot_password.html">Forgot password?</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; <span id="y"></span> Anake BI23110059 | Website</p>
+    </footer>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
