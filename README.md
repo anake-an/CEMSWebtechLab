@@ -16,8 +16,7 @@ The goal is to simulate a real-world project lifecycle where features are introd
 
 ## 🚀 Features (as of Lab 02)
 
-- 🏠 **Home Page** with hero banner and event listings  
-- 🗂️ **Event Filters** (All, Filter 1–3)  
+- 🏠 **Home Page** with hero banner and event listings
 - 📱 **Responsive Event Table** (stacks on smaller screens)  
 - 📝 **Register Page** with category selection, form validation, and checkboxes for event interests  
 - 🔐 **Login Page** with styled form card  
