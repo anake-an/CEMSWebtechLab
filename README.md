@@ -46,7 +46,7 @@ CEMS/
 │ ├── login.html
 │ ├── register.html
 │ └── css/
-│ └── styles.css
+│ | └── styles.css
 ├── assets/ # Shared images for all labs
 │ ├── img/
 │ │ ├── logo.jpg
