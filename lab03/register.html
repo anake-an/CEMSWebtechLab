@@ -1,0 +1,143 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMS Registration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="../assets/img/logo.jpg" alt="CEMS Logo" class="logo" />
+            <h1>Campus Event Management System</h1>
+            <p>Create your account to start managing and participating in campus events.</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">CEMS</a>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="form-page">
+            <h3>Register</h3>
+            <form action="" method="post" name="registration_form" class="form-card">
+                <fieldset class="field-group">
+                    <legend>Category</legend>
+                    <label><input type="radio" name="category" value="staff" required> Staff</label>
+                    <label><input type="radio" name="category" value="student"> Student</label>
+                    <label><input type="radio" name="category" value="public"> Public</label>
+                </fieldset>
+                <div class="field">
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="Anake N">
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                        placeholder="you@example.com">
+                </div>
+                <div class="field">
+                    <label for="phone">Phone:</label><br>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0123456789">
+                </div>
+                <div class="field">
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required minlength="6" maxlength="8"
+                        autocomplete="new-password" placeholder="6–8 characters">
+                </div>
+                <div class="field">
+                    <p><strong>Recommend event about: </strong></p>
+                    <label><input type="checkbox" name="event[]" value="workshop"> Workshop</label><br>
+                    <label><input type="checkbox" name="event[]" value="seminar"> Seminar</label><br>
+                    <label><input type="checkbox" name="event[]" value="competition"> Competition</label><br>
+                    <label><input type="checkbox" name="event[]" value="festival"> Festival</label><br>
+                    <label><input type="checkbox" name="event[]" value="sport"> Sport</label><br>
+                    <label><input type="checkbox" name="event[]" value="course"> Course</label><br>
+                </div>
+                <div class="actions">
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <p id="output"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer id="myfoot">
+        <hr>
+        <p>&copy; <span id="y"></span> Aniq BI23110059 | Website</p>
+    </footer>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        menuIcon.onclick = () => navLinks.classList.toggle('active');
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector('form[name="registration_form"]');
+            const output = document.getElementById("output");
+
+            form.addEventListener("submit", function (e) {
+                const categoryEl = document.querySelector('input[name="category"]:checked');
+                const category = categoryEl ? categoryEl.value : "";
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const password = document.getElementById("password").value;
+
+                const eventBoxes = document.querySelectorAll('input[name="event[]"]');
+                const selectedEvents = [...eventBoxes].filter(b => b.checked).map(b => b.value);
+
+                if (selectedEvents.length === 0) {
+                    e.preventDefault();
+                    alert("Please select at least one recommended event.");
+                    output.style.color = "red";
+                    output.textContent = "Please select at least one recommended event.";
+                    return;
+                }
+
+                const phoneIsValid = /^\d{10}$/.test(phone);
+                if (!phoneIsValid) {
+                    e.preventDefault();
+                    output.style.color = "red";
+                    output.textContent = "Phone must be exactly 10 digits (numbers only).";
+                    return;
+                }
+
+                if (password.length < 6 || password.length > 8) {
+                    e.preventDefault();
+                    output.style.color = "red";
+                    output.textContent = "Password length must be between 6 and 8 characters.";
+                    return;
+                }
+
+                e.preventDefault();
+                output.style.color = "green";
+                output.innerHTML =
+                    `Thank you, <strong>${name}</strong>!<br>`;
+            });
+        });
+    </script>
+</body>
+
+</html>
