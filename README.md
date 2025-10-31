@@ -14,13 +14,16 @@ The goal is to simulate a real-world project lifecycle where features are introd
 
 ---
 
-## 🚀 Features (as of Lab 02)
-
-- 🏠 **Home Page** with hero banner and event listings
-- 📱 **Responsive Event Table** (stacks on smaller screens)  
-- 📝 **Register Page** with category selection, form validation, and checkboxes for event interests  
-- 🔐 **Login Page** with styled form card  
-- 🎨 **Consistent Styling** across pages with shared CSS  
+## 🚀 Features (as of Lab 03)
+- 📱 **Responsive Navigation Menu** with hamburger icon (Font Awesome)
+- ⚙️ **JavaScript Toggle Function** for mobile navigation visibility
+- 🧾 **Register Form Validation**:
+  - Requires at least one event checkbox selected
+  - Validates phone number (10 digits, numeric only)
+  - Validates password length between 6–8 characters
+- 💬 **Dynamic Feedback Message** showing all validated user input inside `<p id="output"></p>`
+- 🔒 **Improved User Interaction** with inline alerts and smooth validation flow
+- 🎨 **Consistent Styling** maintained using shared `styles.css` without changing aspect ratios
 
 ---
 
