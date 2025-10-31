@@ -8,7 +8,7 @@ This project is being developed progressively as part of **Web Technology (KP349
 
 ## 💡 Project Overview
 
-CEMS is a continuous weekly lab project that starts with basic **HTML structures** (Lab 01) and evolves into a responsive **HTML + CSS web application** (Lab 02), with further enhancements coming in Lab 03 and beyond.
+CEMS is a continuous weekly lab project that starts with basic **HTML structures** (Lab 01) and evolves into a responsive **HTML + CSS web application** (Lab 02), with further enhancements coming in **Lab 03** using **JavaScript** for interactivity.
 
 The goal is to simulate a real-world project lifecycle where features are introduced incrementally.
 
@@ -46,6 +46,12 @@ CEMS/
 │ ├── register.html
 │ ├── css/
 │ | └── styles.css
+├── lab03/ # Lab 03 - HTML + CSS + JavaScript
+│ ├── index.html
+│ ├── login.html
+│ ├── register.html
+│ ├── css/
+│ | └── styles.css
 ├── assets/ # Shared images for all labs
 │ ├── img/
 │ │ ├── logo.jpg
@@ -65,7 +71,7 @@ CEMS/
    ```bash
    git clone https://github.com/<your-username>/<your-repo>.git
 2. Open the project folder in VS Code.
-3. Open lab01/index.html or lab02/index.html in a browser, or use Live Server in VS Code.
+3. Open in a browser, or use Live Server in VS Code.
 4. Explore the pages:
    - index.html → Home with event listings
    - register.html → Registration form
